@@ -10,7 +10,7 @@ function UserForm(props) {
                 </div>
             </div>
             <div className="field">
-                <label className="label">First Name</label>
+                <label className="label">Age</label>
                 <div className="control">
                     <input className="input" type="number" name="age" placeholder="age" value={props.user.age} onChange={props.onChange} />
                 </div>

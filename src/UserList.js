@@ -1,7 +1,6 @@
 import React from "react";
 
 function UserList(props) {
-
     return (
         <ul>
             {props.coll.map((user, i) => (

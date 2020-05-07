@@ -2,7 +2,7 @@ import React from "react";
 
 function UserForm(props) {
     return (
-        <form onSubmit={props.onSubmit}>
+        <form data-testid="form" onSubmit={props.onSubmit}>
             <div className="field">
                 <label className="label">First Name</label>
                 <div className="control">

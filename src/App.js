@@ -11,17 +11,13 @@ function App() {
     const initialUser = {
         firstName: "", age: ""
     };
-    const { user, handleAddUser } = useUser(initialUser);
+    const { user, handleChangeUser } = useUser(initialUser);
     const { coll, handleAddCollectionItem } = useCollection();
 
-    /**
-     * generic function for updating the state of fields
-     * @param {Event} e 
-     */
     const handleInputChange = (e) => {
         const target = e.currentTarget;
         const value = target.type === "checkbox" ? target.checked : target.value;
-        handleAddUser({...user, [target.name]: value});
+        handleChangeUser({...user, [target.name]: value});
     };
 
     const validateUser = (currUser) => {
@@ -39,7 +35,7 @@ function App() {
     const handleSubmit = (e) => {
         if(validateUser(user)) {
             handleAddCollectionItem(user);
-            handleAddUser(initialUser);    
+            handleChangeUser(initialUser);    
         }
         e.preventDefault();
     };

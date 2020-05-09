@@ -7,10 +7,10 @@ let utils, firstName, age, submit;
 beforeEach(() => {
     // render App
     utils = render(<App />);
-    firstName = utils.getByTestId("firstName")
+    firstName = utils.getByTestId("firstName");
     age = utils.getByTestId("age");
     submit = utils.getByTestId("submit");
-})
+});
 
 afterEach(cleanup);
 
@@ -64,5 +64,5 @@ describe("<App />", () => {
 
         liItems = await queryAllByRole(utils.container, "listitem");
         expect(liItems.length).toBe(0);
-    })
+    });
 });

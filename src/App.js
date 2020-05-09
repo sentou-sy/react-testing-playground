@@ -26,7 +26,7 @@ function App() {
         }
 
         return false;
-    }
+    };
 
     /**
      * add the users data to the list

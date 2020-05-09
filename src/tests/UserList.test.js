@@ -13,12 +13,12 @@ beforeEach(() => {
             renderData={handleRenderData}
         />
     );
-})
+});
 afterEach(cleanup);
 
 describe("<UserList />", () => {
     it("can render correct amount of li elements", () => {
         // assert 2 because it should render 2 li's because we have 2 objects in the collection
         expect(utils.getAllByRole("listitem").length).toBe(2);
-    })
+    });
 });

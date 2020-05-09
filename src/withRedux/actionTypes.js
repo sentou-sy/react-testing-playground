@@ -6,4 +6,4 @@ export const DECREMENT = "decrement.counter";
 
 export default {
     ADD_TODO, REMOVE_TODO, INCREMENT, DECREMENT
-}
+};

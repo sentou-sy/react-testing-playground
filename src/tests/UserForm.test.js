@@ -1,9 +1,9 @@
 import React from "react";
-import { render, cleanup, fireEvent, getByTestId } from "@testing-library/react";
+import { render, cleanup, fireEvent } from "@testing-library/react";
 import UserForm from "./../UserForm";
 
 // boots up the <UserForm /> so we can share the dom with all tests
-let utils, firstName, age, submit, handleChange, handleSubmit;
+let utils, firstName, age, handleChange, handleSubmit;
 beforeEach(() => {
     handleChange = jest.fn();
     handleSubmit = jest.fn();
@@ -18,10 +18,9 @@ beforeEach(() => {
             } }
         />
     );
-    firstName = utils.getByTestId("firstName")
+    firstName = utils.getByTestId("firstName");
     age = utils.getByTestId("age");
-    submit = utils.getByTestId("submit");
-})
+});
 afterEach(cleanup);
 
 describe("<UserForm />", () => {
